@@ -27,3 +27,4 @@ def add_rating(request, p_id):
         Rating.objects.create(user=user, computer=computer, value=value)
 
     return Response('rating created', 201)
+
