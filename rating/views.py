@@ -30,3 +30,21 @@ def add_rating(request, c_id):
 
     return Response('rating created', 201)
 
+@api_view(['DELETE'])
+def delete_rating(request, c_id):
+    user = request.user
+    computer = get_object_or_404(Computer, id=c_id)
+    # delete_rating = request.DELETE.get('value')
+
+    if not user.is_authenticated:
+        raise ValueError('authentication credentials are not provided')
+    
+    if Rating.objects.filter(user=user, computer=computer).exists():
+        rating = Rating.objects.get(user=user, computer=computer)
+        # rating.value = value
+        rating.delete()
+
+    else:
+        raise ValueError('rating does not exists')
+
+    return Response('rating deleted', 201)

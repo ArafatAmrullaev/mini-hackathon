@@ -9,7 +9,6 @@ class Computer(models.Model):
     model = models.CharField(max_length=50)
     count_core = models.IntegerField(choices=[(2,2), (4,4), (8,8), (16,16)])
     ram = models.IntegerField(
-        default=1,
         validators=[
             MaxValueValidator(120),
             MinValueValidator(2)
