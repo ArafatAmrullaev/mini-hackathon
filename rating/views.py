@@ -9,9 +9,9 @@ from .models import Rating
 from computer.models import Computer
 
 @api_view(['POST'])
-def add_rating(request, p_id):
+def add_rating(request, c_id):
     user = request.user
-    computer = get_object_or_404(Computer, id=p_id)
+    computer = get_object_or_404(Computer, id=c_id)
     value = request.POST.get('value')
 
     if not user.is_authenticated:
