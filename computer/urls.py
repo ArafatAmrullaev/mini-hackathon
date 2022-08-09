@@ -9,5 +9,5 @@ router.register('computers', ComputerViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('products/add_rating/<int:p_id>/', add_rating),
+    path('computers/add_rating/<int:c_id>/', add_rating),
 ]
