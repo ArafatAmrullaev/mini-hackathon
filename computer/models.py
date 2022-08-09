@@ -11,8 +11,8 @@ class Computer(models.Model):
     ram = models.IntegerField(
         default=1,
         validators=[
-            MaxValueValidator(100),
-            MinValueValidator(1)
+            MaxValueValidator(120),
+            MinValueValidator(2)
         ]
      )
     price = models.DecimalField(max_digits=10, decimal_places=2)

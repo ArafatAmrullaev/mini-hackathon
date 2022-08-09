@@ -5,6 +5,8 @@ from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.decorators import api_view, action
 from rest_framework import filters
+from .models import Rating
+from computer.models import Computer
 
 @api_view(['POST'])
 def add_rating(request, p_id):
