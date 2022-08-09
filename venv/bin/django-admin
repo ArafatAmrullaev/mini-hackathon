@@ -1,4 +1,4 @@
-#!/home/arafat/Desktop/mini_hackathon/computer/venv/bin/python3
+#!/home/hello/Desktop/MiniHacathon/mini-hackathon/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
